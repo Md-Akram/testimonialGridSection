@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap');
+
+:root {
+  --Moderateviolet: hsl(263, 55%, 52%);
+  --Verydarkgrayishblue: hsl(217, 19%, 35%);
+  --Verydarkblackishblue: hsl(219, 29%, 14%);
+  --White: hsl(0, 0%, 100%);
+
+  --Lightgray: hsl(0, 0%, 81%);
+  --Lightgrayishblue: hsl(210, 46%, 95%);
+}
+
+* {
+  font-family: 'Barlow Semi Condensed', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+p {
+  text-align: justify;
+}
+
+body {
+  background-color: var(--Lightgrayishblue);
+}
+
+.container {
+  width: 80%;
+  max-width: 400px;
+  margin: 100px auto;
+}
+
+.card {
+  padding: 30px;
+  background-color: var(--White);
+  border-radius: 10px;
+  margin-bottom: 30px;
+  box-shadow: 0 0.25rem 0.25rem rgba(0, 0, 0, 0.289);
+}
+.card-header {
+  display: flex;
+  align-items: center;
+}
+.card-header > img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+.card-header-right {
+  margin-left: 10px;
+}
+
+.card > h2 {
+  margin: 20px 0;
+}
+.card > p {
+  margin: 10px 0;
+}
+
+.card-1 {
+  background-image: url(images/bg-pattern-quotation.svg);
+  background-repeat: no-repeat;
+  background-position-x: 250px;
+  background-position-y: 20px;
+  background-color: var(--Moderateviolet);
+  color: white;
+}
+.card-1 h4 {
+  color: var(--Lightgrayishblue);
+}
+.card-1 p {
+  color: var(--Lightgray);
+}
+
+.card-2 {
+  background-color: var(--Verydarkgrayishblue);
+  color: white;
+}
+.card-2 p {
+  color: var(--Lightgray);
+}
+
+.card-3 {
+  color: var(--Verydarkgrayishblue);
+}
+
+.card-4 {
+  background-color: var(--Verydarkblackishblue);
+  color: var(--White);
+}
+.card-4 p {
+  color: var(--Lightgray);
+}
+
+.card-5 {
+  color: var(--Verydarkgrayishblue);
+}
+.card-5 p {
+  color: hsla(217, 19%, 35%, 0.7);
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  margin: 10px 0;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media (min-width: 1000px) {
+  .container {
+    max-width: none;
+    display: grid;
+    grid-template-columns: repeat(4, 25%);
+    grid-template-rows: repeat(2, 50%);
+    grid-gap: 20px;
+    grid-template-areas:
+      'violet1 violet1 grey2 longwhite3'
+      'shortWhite4 black5 black5 longwhite3';
+  }
+  .card {
+    margin: 0;
+  }
+  .card-1 {
+    grid-area: violet1;
+  }
+  .card-2 {
+    grid-area: grey2;
+  }
+  .card-5 {
+    grid-area: longwhite3;
+  }
+  .card-3 {
+    grid-area: shortWhite4;
+  }
+  .card-4 {
+    grid-area: black5;
+  }
+}
